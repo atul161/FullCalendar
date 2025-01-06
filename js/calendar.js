@@ -43,6 +43,15 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('booking-end-time').textContent = "Event End Date/Time: " + " " + info.endStr;
             modal.style.display = 'block';
         },
+        eventContent: function (arg) {
+            let label = arg.event.extendedProps.label || '';
+            return {
+                html: `<div class="fc-event-main">
+                <span>${arg.event.title}</span>
+                <span class="fc-event-label">${label.replace(/-/g, ' ')}</span>
+               </div>`
+            };
+        },
         events: async function (fetchInfo, successCallback, failureCallback) {
             const events = await fetchEvents();
             successCallback(events);
