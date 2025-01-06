@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>FullCalendar WINI POC</title>
+        <!-- Custom CSS -->
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/model.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wini-calendar">
+            WINI Calendar POC
+        </div>
+
+        <!-- Modern Modal -->
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Create New Event</h2>
+                <div class="booking-time-details">
+                    <div id="booking-start-time">Booking start time: </div>
+                    <div id="booking-end-time" >Booking End Time: </div>
+                </div>
+                <form id="eventForm">
+                    <div class="form-group">
+                        <label for="eventTitle">Title:</label>
+                        <input type="text" id="eventTitle" name="eventTitle" placeholder="Enter event title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventName">Name:</label>
+                        <input type="text" id="eventName" name="eventName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventSubject">Subject:</label>
+                        <input type="text" id="eventSubject" name="eventSubject" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="eventNotes">Notes:</label>
+                        <textarea id="eventNotes" name="eventNotes" placeholder="Enter any notes here"></textarea>
+                    </div>
+                    <input type="hidden" id="eventStart" name="eventStart">
+                    <input type="hidden" id="eventEnd" name="eventEnd">
+                    <div class="form-actions">
+                        <button type="button" class="cancel-button">Cancel</button>
+                        <button type="submit" class="submit-button">Save Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div id="calendar"></div>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+        <script src="./js/calendar.js"></script>
+    </body>
+</html>
