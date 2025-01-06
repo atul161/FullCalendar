@@ -1,6 +1,54 @@
 {
   "Events": [
     {
+      "title": "WINConnect Meeting",
+      "id": "TqPsPHHfsdb8",
+      "start": "2025-01-5T09:00:00",
+      "end": "2025-01-5T09:30:00",
+      "extendedProps": {
+        "subject": "Daily Updates",
+        "notes": "Quick update on ongoing tasks.",
+        "label": "Event"
+      }
+    },
+
+    {
+      "title": "WINConnect Brainstorm",
+      "id": "TqPsPHHfb8ds",
+      "start": "2025-01-6T010:00:00",
+      "end": "2025-01-6T012:30:00",
+      "extendedProps": {
+        "subject": "Daily Updates",
+        "notes": "Quick update on ongoing tasks.",
+        "label": "Event"
+      }
+    },
+
+    {
+      "title": "Hr Update Call",
+      "id": "TqPsPHHfb8d",
+      "start": "2025-01-6T06:00:00",
+      "end": "2025-01-6T07:30:00",
+      "extendedProps": {
+        "subject": "Daily Updates",
+        "notes": "Quick update on ongoing tasks.",
+        "label": "Event"
+      }
+    },
+
+    {
+      "title": "WINConnect Standup",
+      "id": "TqPsPHHfb8",
+      "start": "2025-01-10T09:00:00",
+      "end": "2025-01-10T09:30:00",
+      "extendedProps": {
+        "subject": "Daily Updates",
+        "notes": "Quick update on ongoing tasks.",
+        "label": "Event"
+      }
+    },
+
+    {
       "title": "WINConnect Standup",
       "id": "TqPsPHHfb8",
       "start": "2025-01-10T09:00:00",

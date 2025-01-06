@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', function () {
     let cancelButton = document.querySelector('.cancel-button');
     let eventForm = document.getElementById('eventForm');
 
+    // Tooltip container
+    let tooltip = document.createElement('div');
+    tooltip.id = 'eventTooltip';
+    tooltip.style.position = 'absolute';
+    tooltip.style.zIndex = '1000';
+    tooltip.style.background = '#df8989';
+    tooltip.style.border = '1px solid #ccc';
+    tooltip.style.padding = '10px';
+    tooltip.style.borderRadius = '5px';
+    tooltip.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+    tooltip.style.display = 'none';
+    document.body.appendChild(tooltip);
+
     async function fetchEvents() {
         try {
             const response = await fetch('https://my-json-server.typicode.com/atul161/FullCalendar/Events'); // Replace with your JSON file path
@@ -55,6 +68,22 @@ document.addEventListener('DOMContentLoaded', function () {
         events: async function (fetchInfo, successCallback, failureCallback) {
             const events = await fetchEvents();
             successCallback(events);
+        },
+        eventMouseEnter: function (info) {
+            let event = info.event;
+            let details = `
+                <strong>${event.title}</strong><br>
+                Subject: ${event.extendedProps.subject || 'N/A'}<br>
+                Notes: ${event.extendedProps.notes || 'N/A'}<br>
+                Label: ${event.extendedProps.label || 'N/A'}
+            `;
+            tooltip.innerHTML = details;
+            tooltip.style.display = 'block';
+            tooltip.style.left = info.jsEvent.pageX + 10 + 'px';
+            tooltip.style.top = info.jsEvent.pageY + 10 + 'px';
+        },
+        eventMouseLeave: function () {
+            tooltip.style.display = 'none';
         }
     });
 
