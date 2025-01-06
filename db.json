@@ -1,0 +1,169 @@
+{
+  "events": [
+    {
+      "title": "WINConnect Standup",
+      "id": 1,
+      "start": "2025-01-10T09:00:00",
+      "end": "2025-01-10T09:30:00",
+      "extendedProps": {
+        "subject": "Daily Updates",
+        "notes": "Quick update on ongoing tasks."
+      }
+    },
+    {
+      "title": "Data Model Call",
+      "id": 1,
+      "start": "2025-01-10T11:00:00",
+      "end": "2025-01-10T12:00:00",
+      "extendedProps": {
+        "subject": "UnderStanding Data Model Of Backend",
+        "notes": "Discussion about HLD and LLD"
+      }
+    },
+    {
+      "title": "UI Design Review",
+      "start": "2025-01-11T14:00:00",
+      "end": "2025-01-11T15:30:00",
+      "extendedProps": {
+        "subject": "Design Feedback",
+        "notes": "Review and finalize UI mockups."
+      }
+    },
+    {
+      "title": "Sprint Planning",
+      "start": "2025-01-12T10:00:00",
+      "end": "2025-01-12T11:30:00",
+      "extendedProps": {
+        "subject": "Sprint Goals",
+        "notes": "Define tasks for the upcoming sprint."
+      }
+    },
+    {
+      "title": "Backend Architecture Discussion",
+      "start": "2025-01-13T15:00:00",
+      "end": "2025-01-13T16:00:00",
+      "extendedProps": {
+        "subject": "System Design",
+        "notes": "Discuss the architecture for new features."
+      }
+    },
+    {
+      "title": "BIWeekly - All-Hands Meeting",
+      "start": "2025-01-14T13:00:00",
+      "end": "2025-01-14T14:00:00",
+      "extendedProps": {
+        "subject": "Company Updates",
+        "notes": "Quarterly update from leadership."
+      }
+    },
+    {
+      "title": "Code Review",
+      "start": "2025-01-15T11:00:00",
+      "end": "2025-01-15T12:30:00",
+      "extendedProps": {
+        "subject": "Sprint Deliverables",
+        "notes": "Review code from the last sprint."
+      }
+    },
+    {
+      "title": "HR Policy Update",
+      "start": "2025-01-16T10:00:00",
+      "end": "2025-01-16T11:00:00",
+      "extendedProps": {
+        "subject": "Policy Changes",
+        "notes": "Overview of updated HR policies."
+      }
+    },
+    {
+      "title": "Project Milestone Review",
+      "start": "2025-01-17T14:00:00",
+      "end": "2025-01-17T15:30:00",
+      "extendedProps": {
+        "subject": "Progress Check",
+        "notes": "Assess progress on key project milestones."
+      }
+    },
+    {
+      "title": "Tech Talk",
+      "start": "2025-01-18T16:00:00",
+      "end": "2025-01-18T17:00:00",
+      "extendedProps": {
+        "subject": "Latest Trends",
+        "notes": "Discussion on new technologies."
+      }
+    },
+    {
+      "title": "Quarterly Review",
+      "start": "2025-01-20T09:30:00",
+      "end": "2025-01-20T11:00:00",
+      "extendedProps": {
+        "subject": "Performance Review",
+        "notes": "Evaluate team and individual performance."
+      }
+    },
+    {
+      "title": "Client Feedback Session",
+      "start": "2025-01-21T10:00:00",
+      "end": "2025-01-21T11:00:00",
+      "extendedProps": {
+        "subject": "Product Feedback",
+        "notes": "Discuss feedback from the client."
+      }
+    },
+    {
+      "title": "Bug Bash",
+      "start": "2025-01-22T14:00:00",
+      "end": "2025-01-22T16:00:00",
+      "extendedProps": {
+        "subject": "Bug Fixing",
+        "notes": "Collaborative effort to resolve reported bugs."
+      }
+    },
+    {
+      "title": "Sales Strategy Meeting",
+      "start": "2025-01-23T10:30:00",
+      "end": "2025-01-23T11:30:00",
+      "extendedProps": {
+        "subject": "Sales Targets",
+        "notes": "Plan strategies to meet quarterly sales goals."
+      }
+    },
+    {
+      "title": "DevOps Workflow Discussion",
+      "start": "2025-01-24T15:00:00",
+      "end": "2025-01-24T16:30:00",
+      "extendedProps": {
+        "subject": "Infrastructure",
+        "notes": "Review and optimize the current DevOps workflow."
+      }
+    },
+    {
+      "title": "Marketing Campaign Review",
+      "start": "2025-01-25T13:00:00",
+      "end": "2025-01-25T14:00:00",
+      "extendedProps": {
+        "subject": "Campaign Analysis",
+        "notes": "Evaluate the effectiveness of recent campaigns."
+      }
+    },
+    {
+      "title": "Product Roadmap Planning",
+      "start": "2025-01-26T09:00:00",
+      "end": "2025-01-26T10:30:00",
+      "extendedProps": {
+        "subject": "Feature Planning",
+        "notes": "Plan new features and prioritize tasks."
+      }
+    },
+    {
+      "title": "Customer Success Meeting",
+      "start": "2025-01-27T11:00:00",
+      "end": "2025-01-27T12:00:00",
+      "extendedProps": {
+        "subject": "Customer Retention",
+        "notes": "Discuss strategies for improving customer satisfaction."
+      }
+    }
+  ]
+
+}
