@@ -25,6 +25,15 @@
                 </div>
                 <form id="eventForm">
                     <div class="form-group">
+                        <label for="eventLabel">Event Label:</label>
+                        <select id="eventLabel" name="eventLabel" required>
+                            <option value="out-of-office">Out of Office</option>
+                            <option value="external">External Event</option>
+                            <option value="busy">Busy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="eventTitle">Title:</label>
                         <input type="text" id="eventTitle" name="eventTitle" placeholder="Enter event title" required>
                     </div>

@@ -3,4 +3,4 @@
 
 ### https://my-json-server.typicode.com/atul161/FullCalendar
 
-#### getAllEvents: https://my-json-server.typicode.com/atul161/FullCalendar/events
+#### getAllEvents: https://my-json-server.typicode.com/atul161/FullCalendar/Events

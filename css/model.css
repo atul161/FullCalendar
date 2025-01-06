@@ -130,3 +130,15 @@ textarea {
 .close:hover {
     color: #333;
 }
+
+.fc-event-label {
+    display: block;
+    font-size: 0.8em;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-top: 2px;
+    text-transform: capitalize;
+}
+

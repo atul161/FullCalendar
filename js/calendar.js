@@ -5,7 +5,28 @@ document.addEventListener('DOMContentLoaded', function () {
     let cancelButton = document.querySelector('.cancel-button');
     let eventForm = document.getElementById('eventForm');
 
-    // Initialize the calendar
+    async function fetchEvents() {
+        try {
+            const response = await fetch('https://my-json-server.typicode.com/atul161/FullCalendar/Events'); // Replace with your JSON file path
+            if (!response.ok) throw new Error('Network response was not ok');
+            const events = await response.json();
+            return events.map(event => ({
+                title: `${event.title}`,
+                start: event.start,
+                end: event.end,
+                extendedProps: {
+                    subject: event.extendedProps.subject,
+                    notes: event.extendedProps.notes,
+                    label: event.extendedProps.label
+                },
+                classNames: [event.extendedProps.label],
+            }));
+        } catch (error) {
+            console.error('Error fetching events:', error);
+            return [];
+        }
+    }
+
     let calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         headerToolbar: {
@@ -16,19 +37,20 @@ document.addEventListener('DOMContentLoaded', function () {
         height: '100%',
         selectable: true,
         select: function (info) {
-            // Open modal and set start/end values
             document.getElementById('eventStart').value = info.startStr;
             document.getElementById('eventEnd').value = info.endStr;
-            console.log(info.startStr)
-            document.getElementById('booking-start-time').textContent = "Event Start Date/Time: " + " " +  info.startStr
-            document.getElementById('booking-end-time').textContent = "Event End Date/Time: " + " " +  info.endStr
+            document.getElementById('booking-start-time').textContent = "Event Start Date/Time: " + " " + info.startStr;
+            document.getElementById('booking-end-time').textContent = "Event End Date/Time: " + " " + info.endStr;
             modal.style.display = 'block';
+        },
+        events: async function (fetchInfo, successCallback, failureCallback) {
+            const events = await fetchEvents();
+            successCallback(events);
         }
     });
 
     calendar.render();
 
-    // Close modal logic
     closeModal.onclick = function () {
         modal.style.display = 'none';
     };
@@ -37,36 +59,35 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
     };
 
-    // Close modal when clicking outside of it
     window.onclick = function (event) {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
     };
 
-    // Handle form submission
     eventForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Collect form data
         let title = document.getElementById('eventTitle').value;
         let name = document.getElementById('eventName').value;
         let subject = document.getElementById('eventSubject').value;
         let notes = document.getElementById('eventNotes').value;
         let start = document.getElementById('eventStart').value;
         let end = document.getElementById('eventEnd').value;
-        // Add event to the calendar
+        let label = document.getElementById('eventLabel').value;
+
         calendar.addEvent({
             title: `${title} - ${name}`,
             start: start,
             end: end,
             extendedProps: {
                 subject: subject,
-                notes: notes
-            }
+                notes: notes,
+                label: label
+            },
+            classNames: [label],
         });
 
-        // Reset form and close modal
         eventForm.reset();
         modal.style.display = 'none';
     });
